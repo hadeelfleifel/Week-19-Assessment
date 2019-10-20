@@ -9,6 +9,10 @@ var result="My name is: " + name + "and my age is: " + age
 
 
 
+const result =(name,age)=>{
+
+  return `My name is: $name and my age is: $age`;
+}
 
 
 
@@ -25,3 +29,12 @@ var object={
 }
  */
 // 2) WRITE YOUR CODE UNDER THIS LINE
+
+
+const object = (food,color)=>{
+  {{food}};
+  {{color}};
+  multi =(a,b)=>{
+    return a *b;
+  }
+}

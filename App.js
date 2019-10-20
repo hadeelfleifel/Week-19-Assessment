@@ -25,15 +25,25 @@ export default class App extends Component {
   // Q2: we have 6 errors here please fix them [6 pt]
   addTodoItem = newTask => {
     axios
-      .get('getTasks')
-      .then(res => {
-        const result = res;
-        this.state.tasks = result;
+      // .get('getTasks')
+      // post method , path ,item
+      .post('http://localhost:9000/addNewTask',{newTask})
+      
+      // .then(res => {
+      .then(({data}) => {
+        // const result = res;
+        // setState , tasks:res.data
+        this.setState({tasks:data});
       })
       .catch(error => {
         console.log(error);
       });
   };
+
+
+  
+ 
+
 
   toggleComplete = id => {
     axios
